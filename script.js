@@ -1,12 +1,26 @@
 $(document).ready(function () {
-    var apiKey = ''
+
+
+    var apiKey = 'AIzaSyCPfeCYrxkjhyQ1ghnZO43_clhrhHxiJqs'
     var queryURL = ''
 
-    $('#anime-home-btn').on('click', function () {
-        console.log('button was clicked')
-    })
 
-    $('#liveaction-home-btn').on('click', function () {
-        console.log('button was clicked')
-    })
+    
+    $.ajax({
+        queryURL: queryURL,
+        method: 'GET'
+    }).then
+
+    $('#anime-home-btn').on('click', animeBtn)
+
+    $('#liveaction-home-btn').on('click', liveActionBtn)
 })
+
+function animeBtn () {
+    console.log('animeBtnClick works')
+}
+
+function liveActionBtn () {
+    console.log('live action btn clicked')
+}
+
