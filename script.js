@@ -26,28 +26,29 @@ $(document).ready(function () {
        height: '390',
        width: '640',
        videoId: 'EzOr8Gglf3k',
-       events: {
-         'onReady': onPlayerReady,
-         'onStateChange': onPlayerStateChange
-       }
      });
    }
 
-   // The API will call this function when the video player is ready.
-   function onPlayerReady(event) {
-     event.target.playVideo();
-   }
+$(document).ready(function() {
 
-   // The API calls this function when the player's state changes.
-   // The function indicates that when playing a video (state=1),
-   // the player should play for six seconds and then stop.
-   var done = false;
-   function onPlayerStateChange(event) {
-     if (event.data == YT.PlayerState.PLAYING && !done) {
-       setTimeout(stopVideo, 6000);
-       done = true;
-     }
-   }
-   function stopVideo() {
-     player.stopVideo();
-   }
+    var key = 'AIzaSyDX0T3NV-ugzJ8VlXk11vKCoCS26_2xSSs';
+    var playlistId = 'PLqYXv_L7NiEzgd0-1z7RmyZtirWffCZKb';
+    var URL = 'https://www.googleapis.com/youtube/v3/playlistItems';
+
+    var options = {
+        part: "snippet",
+        key: key,
+        maxResults: 100,
+        playlistId: playlistId,
+    }
+
+    loadVids();
+
+    function loadVids() {
+        $.getJSON(URL, options, function(data){
+            console.log(data)
+        })
+    }
+
+
+});
