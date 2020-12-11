@@ -14,7 +14,7 @@ $(document).ready(function () {
     $('#anime-home-btn').on('click', animeBtn)
 
     $('#liveaction-home-btn').on('click', liveActionBtn)
-})
+
 
 function animeBtn () {
     console.log('animeBtnClick works')
@@ -23,6 +23,7 @@ function animeBtn () {
 function liveActionBtn () {
     console.log('live action btn clicked')
 }
+
 
 // Code below is for the video player
    // This code loads the IFrame Player API code asynchronously.
@@ -64,3 +65,4 @@ function liveActionBtn () {
    function stopVideo() {
      player.stopVideo();
    }
+})
