@@ -1,9 +1,9 @@
 // This function calls the Youtube API and receives an object for a certain playlist
-$(document).ready(function () {
 
+$(document).ready(function () {
     var key = 'AIzaSyDX0T3NV-ugzJ8VlXk11vKCoCS26_2xSSs';
     var playlistId = 'PLzf4erpJ2VgJ4v18XQHW5lAamvwdk-dxl';
-    var animePlaylistId = 'PL2-sOoJcYV7YBJccS-o_qlfcaQ0liaCKq';
+    var animePlaylistId = 'PLzf4erpJ2VgJjEuN3_vDAU5kAK2hE44gE';
     var URL = 'https://www.googleapis.com/youtube/v3/playlistItems';
 
     var options = {
@@ -38,14 +38,15 @@ $(document).ready(function () {
             var totalVideos = videoIds.length;
             var randIndex = Math.floor(rand * totalVideos)
             var randomVideo = videoIds[randIndex]
-            player = new YT.Player('mmaplayer', {
-                height: '360',
-                width: '480',
-                videoId: randomVideo,
-            });
-
+            window.YT.ready(function () {
+                player = new YT.Player('mmaplayer', {
+                    height: '360',
+                    width: '480',
+                    videoId: randomVideo,
+                });
+            })
         })
-    }
+    };
     // This function takes the information from the anime video object and places only the video ID into an array
     function loadAnimeVids() {
         $.getJSON(URL, animeOptions, function (data) {
@@ -61,13 +62,14 @@ $(document).ready(function () {
             var totalVideos = videoIds.length;
             var randIndex = Math.floor(rand * totalVideos)
             var randomVideo = videoIds[randIndex]
-            console.log(randomVideo)
-            player2 = new YT.Player('animeplayer', {
-                height: '360',
-                width: '480',
-                videoId: randomVideo,
-            });
-        });
+            window.YT.ready(function () {
+                player2 = new YT.Player('animeplayer', {
+                    height: '360',
+                    width: '480',
+                    videoId: randomVideo,
+                });
+            })
+        })
     };
 
     // Code below is for the video player
@@ -75,6 +77,7 @@ $(document).ready(function () {
     var tag = document.createElement('script');
 
     tag.src = "https://www.youtube.com/iframe_api";
+    src="https://apis.google.com/js/client.js?onload=init";
     var firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 })
