@@ -1,17 +1,15 @@
 // This function calls the Youtube API and receives an object for a certain playlist
-
 $(document).ready(function () {
-giphy-connection
+// giphy-connection
 
     
     // BRANDONS API KEY FOR GIPHY
-    var APIKEY = 'EcTuCnxi6gDpNiUddqUXjbRwECX0iIvh'
+    var APIKEY = 'EcTuCnxi6gDpNiUddqUXjbRwECX0iIvh',
     // BRANDONS API KEY FOR YOUTUBE
-    var apiKey = 'AIzaSyCPfeCYrxkjhyQ1ghnZO43_clhrhHxiJqs'
-    var queryURL = ''
+    // var apiKey = 'AIzaSyCPfeCYrxkjhyQ1ghnZO43_clhrhHxiJqs',
+    queryURL = ''
 
-    $('#giphy-test').on('click', giphy)
-
+    // $'#giphy-test').on('click', giphy)
     function giphy (event) {
         event.preventDefault()
         var textInput = $('#giphy-search').val()
@@ -46,18 +44,12 @@ giphy-connection
         })
     }
 
-
-
-
-
-
     $.ajax({
         queryURL: queryURL,
         method: 'GET'
     }).then
 
     $('#anime-home-btn').on('click', animeBtn)
-
     $('#liveaction-home-btn').on('click', liveActionBtn)
 
 
@@ -68,48 +60,7 @@ function animeBtn () {
 function liveActionBtn () {
     console.log('live action btn clicked')
 }
-
-// Code below is for the video player
-   // This code loads the IFrame Player API code asynchronously.
-   var tag = document.createElement('script');
-
-   tag.src = "https://www.youtube.com/iframe_api";
-   var firstScriptTag = document.getElementsByTagName('script')[0];
-   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-   // This function creates an <iframe> (and YouTube player) after the API code downloads.
-   var player;
-   function onYouTubeIframeAPIReady() {
-     player = new YT.Player('player', {
-       height: '390',
-       width: '640',
-       videoId: 'EzOr8Gglf3k',
-       events: {
-         'onReady': onPlayerReady,
-         'onStateChange': onPlayerStateChange
-       }
-     });
-   }
-
-   // The API will call this function when the video player is ready.
-   function onPlayerReady(event) {
-     event.target.playVideo();
-   }
-
-   // The API calls this function when the player's state changes.
-   // The function indicates that when playing a video (state=1),
-   // the player should play for six seconds and then stop.
-   var done = false;
-   function onPlayerStateChange(event) {
-     if (event.data == YT.PlayerState.PLAYING && !done) {
-       setTimeout(stopVideo, 6000);
-       done = true;
-     }
-   }
-   function stopVideo() {
-     player.stopVideo();
-   }
-=======
+   
     var key = 'AIzaSyDX0T3NV-ugzJ8VlXk11vKCoCS26_2xSSs';
     var playlistId = 'PLzf4erpJ2VgJ4v18XQHW5lAamvwdk-dxl';
     var animePlaylistId = 'PLzf4erpJ2VgJjEuN3_vDAU5kAK2hE44gE';
@@ -189,5 +140,4 @@ function liveActionBtn () {
     src="https://apis.google.com/js/client.js?onload=init";
     var firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
- main
 })
