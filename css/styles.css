@@ -1,5 +1,19 @@
 body {
-    background: url('https://image.freepik.com/free-vector/versus-vs-fight-battle-screen-background_1017-23762.jpg');
+    background: url('https://static.vecteezy.com/system/resources/previews/001/045/654/non_2x/versus-comic-screen-in-orange-and-black-vector.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
+}
+
+#anime-home-btn {
+
+    margin-top: 125%;
+    margin-left: 75%;
+}
+
+#liveaction-home-btn {
+    
+    margin-top: 60%;
+    margin-left: 60%
+    
 }
