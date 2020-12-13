@@ -54,7 +54,6 @@ $(document).ready(function () {
             var videoIds = []
             var i;
             for (i = 0; i < data.items.length; i++) {
-<<<<<<< HEAD
 
                 videoIds.push(data.items[i].snippet.resourceId.videoId)
             }
@@ -76,35 +75,6 @@ $(document).ready(function () {
     // Code below is for the video player
     // This code loads the IFrame Player API code asynchronously.
     var tag = document.createElement('script');
-
-    tag.src = "https://www.youtube.com/iframe_api";
-    src="https://apis.google.com/js/client.js?onload=init";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-})
-=======
-
-                videoIds.push(data.items[i].snippet.resourceId.videoId)
-            }
-            // This loops over the animevideo array and randomly pulls a video Id and places that ID into the video player
-            var rand = Math.random();
-            var totalVideos = videoIds.length;
-            var randIndex = Math.floor(rand * totalVideos)
-            var randomVideo = videoIds[randIndex]
-            window.YT.ready(function () {
-                player2 = new YT.Player('animeplayer', {
-                    height: '360',
-                    width: '480',
-                    videoId: randomVideo,
-                });
-            })
-        })
-    };
-
-    // Code below is for the video player
-    // This code loads the IFrame Player API code asynchronously.
-    var tag = document.createElement('script');
->>>>>>> 52d5eab69e479bb38de7b1d0050786c3ba272b73
 
     tag.src = "https://www.youtube.com/iframe_api";
     src="https://apis.google.com/js/client.js?onload=init";
