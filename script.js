@@ -1,8 +1,12 @@
 // This function calls the Youtube API and receives an object for a certain playlist
 
 $(document).ready(function () {
+btn-trigger-vid
+//giphy-connection
+=======
 giphy-connection
 
+main
     
     // BRANDONS API KEY FOR GIPHY
     var APIKEY = 'EcTuCnxi6gDpNiUddqUXjbRwECX0iIvh'
@@ -46,11 +50,14 @@ giphy-connection
         })
     }
 
+btn-trigger-vid
+=======
 
 
 
 
 
+main
     $.ajax({
         queryURL: queryURL,
         method: 'GET'
@@ -60,6 +67,8 @@ giphy-connection
 
     $('#liveaction-home-btn').on('click', liveActionBtn)
 
+btn-trigger-vid
+=======
 
 function animeBtn () {
     console.log('animeBtnClick works')
@@ -69,6 +78,7 @@ function liveActionBtn () {
     console.log('live action btn clicked')
 }
 
+main
 // Code below is for the video player
    // This code loads the IFrame Player API code asynchronously.
    var tag = document.createElement('script');
@@ -109,7 +119,11 @@ function liveActionBtn () {
    function stopVideo() {
      player.stopVideo();
    }
+btn-trigger-vid
+
 =======
+=======
+ main
     var key = 'AIzaSyDX0T3NV-ugzJ8VlXk11vKCoCS26_2xSSs';
     var playlistId = 'PLzf4erpJ2VgJ4v18XQHW5lAamvwdk-dxl';
     var animePlaylistId = 'PLzf4erpJ2VgJjEuN3_vDAU5kAK2hE44gE';
@@ -129,8 +143,8 @@ function liveActionBtn () {
         playlistId: animePlaylistId,
     }
 
-    loadVids();
-    loadAnimeVids();
+    //loadVids();
+    //loadAnimeVids();
 
     // This function takes the information from the mma video object and places only the video ID into an array
     function loadVids() {
@@ -180,7 +194,6 @@ function liveActionBtn () {
             })
         })
     };
-
     // Code below is for the video player
     // This code loads the IFrame Player API code asynchronously.
     var tag = document.createElement('script');
@@ -189,5 +202,18 @@ function liveActionBtn () {
     src="https://apis.google.com/js/client.js?onload=init";
     var firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+btn-trigger-vid
+
+    function animeBtn () {
+        console.log('animeBtnClick works')
+        loadAnimeVids() 
+    }
+
+    function liveActionBtn () {
+        loadAnimeVids()
+        console.log('live action btn clicked')
+    }
+=======
+ main
  main
 })
