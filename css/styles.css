@@ -1,5 +1,239 @@
-body {
-    background: url('https://image.freepik.com/free-vector/versus-vs-fight-battle-screen-background_1017-23762.jpg');
+.hero{
+    position: fixed;
+    overflow: hidden;
+    position: absolute;
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+    height: 100%;
+ }
+
+
+.bg-img {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/001/045/654/non_2x/versus-comic-screen-in-orange-and-black-vector.jpg');
+    background-position: center center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
+    height: 100%;
+    }
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+
 }
+
+* {
+    box-sizing: border-box;
+
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+    position: absolute;
+    
+
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.animecolumn {
+    width: 125%;
+    padding-top: 10px;
+    text-align: center;
+    float: center;
+    justify-self: center;
+}
+ .lacolumn {
+     width: 100%;
+     margin-top: 1025px;
+     text-align: right;
+     float: center;
+     flex: auto;
+ }   
+
+ #anime-home-btn {
+     align-items: center;
+     font-family: 'Bungee', cursive;
+     float: center;
+     flex: auto;
+     
+ }
+
+ #liveaction-home-btn {
+    align-items: center;
+    font-style: bold;
+    font-family: 'Bungee', cursive;
+    font-family: 'Stalinist One', cursive;
+    float: center;
+    
+ }
+
+@media screen and (max-width: 768px) {
+
+    .hero{
+        position: fixed;
+        overflow: hidden;
+        object-fit: cover;
+        object-position: center center;
+        width: 100%;
+        height: 100%; }
+    
+    
+    .bg-img {
+        background-image: url('https://static.vecteezy.com/system/resources/previews/001/045/654/non_2x/versus-comic-screen-in-orange-and-black-vector.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        height: 100%;
+        }
+    
+    .img-responsive {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    
+    }
+    
+    * {
+        box-sizing: border-box;
+    
+    }
+    
+    .container {
+        display: inline-grid;
+        grid-template-columns: auto auto;
+        padding: 10px;
+        position: flex;
+       
+    
+    }
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    
+    .animecolumn {
+        width: 600%;
+        padding-top: 10px;
+        text-align: right;
+        float: top;
+        flex: auto;
+        
+    }
+     .lacolumn {
+         width: 100%;
+         text-align: right;
+         float: top;
+         flex: auto;
+     }   
+    
+     #anime-home-btn {
+         align-items: right;
+         font-family: 'Bungee', cursive;
+         float: right;
+         flex: right;
+         
+     }
+    
+     #liveaction-home-btn {
+        align-items: center;
+        font-style: bold;
+        font-family: 'Bungee', cursive;
+        font-family: 'Stalinist One', cursive;
+        float: center;
+        
+     }
+
+
+}
+@media screen and (max-width: 576px) {
+
+        .hero{
+        position: fixed;
+        overflow: hidden;
+        object-fit: cover;
+        object-position: center center;
+        width: 100%;
+        height: 100%; }
+    
+    
+    .bg-img {
+        background-image: url('https://static.vecteezy.com/system/resources/previews/001/045/654/non_2x/versus-comic-screen-in-orange-and-black-vector.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        height: 100%;
+        }
+    
+    .img-responsive {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    
+    }
+    
+    * {
+        box-sizing: border-box;
+    
+    }
+    
+    .container {
+        display: inline-grid;
+        grid-template-columns: auto auto;
+        padding: 10px;
+        position: flex;
+       
+    
+    }
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    
+    .animecolumn {
+        width:350%;
+        padding-top: 10px;
+        text-align: center;
+        float: top;
+        flex: auto;
+    }
+     .lacolumn {
+         width: 25%;
+         text-align: right;
+         float: top;
+         flex: auto;
+    
+     }   
+    
+     #anime-home-btn {
+         align-items: right;
+         font-family: 'Bungee', cursive;
+         float: right;
+         flex: right;
+         
+     }
+    
+     #liveaction-home-btn {
+        align-items: center;
+        font-style: bold;
+        font-family: 'Bungee', cursive;
+        font-family: 'Stalinist One', cursive;
+        float: center;
+        
+     }
+
+
+}
+
