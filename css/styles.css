@@ -1,5 +1,7 @@
 .hero{
     position: fixed;
+=======
+    position: relative;
     overflow: hidden;
     position: absolute;
     object-fit: cover;
@@ -7,6 +9,8 @@
     width: 100%;
     height: 100%;
  }
+=======
+    height: 100%; }
 
 
 .bg-img {
@@ -24,6 +28,7 @@
     height: auto;
 
 }
+
 
 * {
     box-sizing: border-box;
@@ -237,3 +242,19 @@
 
 }
 
+.none {
+    display: none;
+}
+
+/* #anime-home-btn {
+
+    margin-top: 75%;
+   margin-left: -15%;
+}
+
+#liveaction-home-btn {
+    
+    margin-top: 75%;
+    margin-left: 85%;
+
+} */
