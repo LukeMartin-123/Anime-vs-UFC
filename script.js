@@ -1,5 +1,4 @@
 // This function calls the Youtube API and receives an object for a certain playlist
-
 $(document).ready(function () {
 //giphy-connection
     
@@ -134,8 +133,8 @@ $(document).ready(function () {
             var randomVideo = videoIds[randIndex]
             window.YT.ready(function () {
                 player = new YT.Player('mmaplayer', {
-                    height: '360',
-                    width: '480',
+                    height: '200',
+                    width: '200',
                     videoId: randomVideo,
                 });
             })
@@ -158,8 +157,8 @@ $(document).ready(function () {
             var randomVideo = videoIds[randIndex]
             window.YT.ready(function () {
                 player2 = new YT.Player('animeplayer', {
-                    height: '360',
-                    width: '480',
+                    height: '200',
+                    width: '200',
                     videoId: randomVideo,
                 });
             })
@@ -177,10 +176,32 @@ $(document).ready(function () {
     function animeBtn () {
         console.log('animeBtnClick works')
         loadAnimeVids() 
+        $(this).addClass('none')
+        $('#anime-vote-btn').removeClass('none')
     }
 
     function liveActionBtn () {
-        loadAnimeVids()
         console.log('live action btn clicked')
+        loadVids()
+        $(this).addClass('none')
+        $('#liveaction-vote-btn').removeClass('none')
+        
     }
+
+    // if anime btn is clicked
+    $(':button').click(function () {
+        if (this.id == 'liveaction-vote-btn') {
+            $('#anime-vote-btn').addClass('none')
+        } else if (this.id == 'anime-vote-btn') {
+            $('#liveaction-vote-btn').addClass('none')
+        }
+    })
+    // create a new button tag
+    // give it the text of vote
+    // append it to the dom
+    
+    // live action btn is clicked 
+    // apply display none to div anime player and mma player
+    
+
 })
