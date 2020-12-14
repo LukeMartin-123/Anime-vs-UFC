@@ -1,21 +1,13 @@
 // This function calls the Youtube API and receives an object for a certain playlist
-
 $(document).ready(function () {
-btn-trigger-vid
-//giphy-connection
-=======
-giphy-connection
-
-main
     
     // BRANDONS API KEY FOR GIPHY
-    var APIKEY = 'EcTuCnxi6gDpNiUddqUXjbRwECX0iIvh'
+    var APIKEY = 'EcTuCnxi6gDpNiUddqUXjbRwECX0iIvh',
     // BRANDONS API KEY FOR YOUTUBE
-    var apiKey = 'AIzaSyCPfeCYrxkjhyQ1ghnZO43_clhrhHxiJqs'
-    var queryURL = ''
+    // var apiKey = 'AIzaSyCPfeCYrxkjhyQ1ghnZO43_clhrhHxiJqs',
+    queryURL = ''
 
-    $('#giphy-test').on('click', giphy)
-
+    // $'#giphy-test').on('click', giphy)
     function giphy (event) {
         event.preventDefault()
         var textInput = $('#giphy-search').val()
@@ -50,35 +42,59 @@ main
         })
     }
 
-btn-trigger-vid
-=======
-
-
-
-
-
-main
     $.ajax({
         queryURL: queryURL,
         method: 'GET'
     }).then
 
     $('#anime-home-btn').on('click', animeBtn)
-
     $('#liveaction-home-btn').on('click', liveActionBtn)
-
-btn-trigger-vid
-=======
 
 function animeBtn () {
     console.log('animeBtnClick works')
+    loadAnimeVids() 
+    $(this).addClass("none");
+    $('#anime-vote-btn').removeClass("none");
 }
 
 function liveActionBtn () {
     console.log('live action btn clicked')
+    loadVids()
+    $(this).addClass("none");
+    $('#liveaction-vote-btn').removeClass("none");
 }
 
-main
+$(':button').click(function () {
+    if (this.id == 'liveaction-vote-btn') {
+        $('#anime-vote-btn').addClass("none");
+        $('#liveaction-vote-btn').addClass("none");
+        $('#anime-home-btn').addClass("none");
+        $('#watch-again').removeClass("none"); 
+        $('#animeplayer').addClass("none");
+    }
+    else if (this.id == 'anime-vote-btn') {
+        $('#liveaction-vote-btn').addClass("none");
+        $('#anime-vote-btn').addClass("none");
+        $('#liveaction-home-btn').addClass("none");
+        $('#watch-again').removeClass("none");  
+        $('#mmaplayer').addClass("none"); 
+    }
+    else if (this.id == 'watch-again') {
+        $('#mmaplayer').removeClass("none");
+        $('#animeplayer').removeClass("none");
+        loadVids()
+        loadAnimeVids() 
+    }
+});
+
+
+// When anime or live action button is clicked show video and hide that button
+
+// Video and vote button appear
+
+// When vote button is clicked a tally is added to local storage and other vote button disappears
+
+
 // Code below is for the video player
    // This code loads the IFrame Player API code asynchronously.
    var tag = document.createElement('script');
@@ -119,11 +135,8 @@ main
    function stopVideo() {
      player.stopVideo();
    }
-btn-trigger-vid
 
-=======
-=======
- main
+
     var key = 'AIzaSyDX0T3NV-ugzJ8VlXk11vKCoCS26_2xSSs';
     var playlistId = 'PLzf4erpJ2VgJ4v18XQHW5lAamvwdk-dxl';
     var animePlaylistId = 'PLzf4erpJ2VgJjEuN3_vDAU5kAK2hE44gE';
@@ -202,7 +215,11 @@ btn-trigger-vid
     src="https://apis.google.com/js/client.js?onload=init";
     var firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-btn-trigger-vid
+
+
+
+})
+
 
     function animeBtn () {
         console.log('animeBtnClick works')
@@ -213,7 +230,6 @@ btn-trigger-vid
         loadAnimeVids()
         console.log('live action btn clicked')
     }
-=======
- main
- main
+
 })
+
