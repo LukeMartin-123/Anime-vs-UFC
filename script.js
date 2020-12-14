@@ -2,7 +2,7 @@
 $(document).ready(function () {
 
     // BRANDONS API KEY FOR GIPHY
-    var APIKEY = 'EcTuCnxi6gDpNiUddqUXjbRwECX0iIvh',
+    var APIKEY = '94c0wIX29IMWXwB7We5WuNS3Y57Da9gs',
         // BRANDONS API KEY FOR YOUTUBE
         // var apiKey = 'AIzaSyCPfeCYrxkjhyQ1ghnZO43_clhrhHxiJqs',
         queryURL = ''
@@ -95,7 +95,6 @@ $(document).ready(function () {
     var animeCount = localStorage.getItem("animeCount");
     mmaVoteCounter.textContent = mmaCount;
     animeVoteCounter.textContent = animeCount;
-    
     $('#anime-vote-btn').on('click', function () {
         animeCount++;
         animeVoteCounter.textContent = animeCount;
@@ -177,6 +176,47 @@ $(document).ready(function () {
             })
         })
     };
+
+    $('#giphy').on('click', getMmaGiphy)
+    $('#a-giphy').on('click', getAnimeGiphy)
+
+    function getAnimeGiphy () {
+        var APIKEY = 'EcTuCnxi6gDpNiUddqUXjbRwECX0iIvh'
+        var queryURL = `http://api.giphy.com/v1/gifs/26vaTNUAnJOP1xalq?api_key=${APIKEY}`
+        $.ajax({
+            url: queryURL,
+            method: 'GET'
+        }).then(function (response) {
+            //console.log(queryURL)
+            var animeImg = $('<img>')
+            console.log(response)
+            console.log('giphy btn clicked')
+            //var mmaImg = (response.data.images.downsized_small)
+           //var mmaImg = <img src="response.data.images.downsized_small"/>
+            animeImg.attr('src', response.data.images.downsized_medium.url)
+            $('#mma-giphy').append(animeImg)
+        })
+    }
+
+    function getMmaGiphy () {
+        var APIKEY = 'EcTuCnxi6gDpNiUddqUXjbRwECX0iIvh'
+        var queryURL = `http://api.giphy.com/v1/gifs/KzVPO2EarWBSWCS2eN?api_key=${APIKEY}`
+        $.ajax({
+            url: queryURL,
+            method: 'GET'
+        }).then(function (response) {
+            //console.log(queryURL)
+            var mmaImg = $('<img>')
+            console.log(response)
+            console.log('giphy btn clicked')
+            //var mmaImg = (response.data.images.downsized_small)
+           //var mmaImg = <img src="response.data.images.downsized_small"/>
+            mmaImg.attr('src', response.data.images.downsized_medium.url)
+            $('#mma-giphy').append(mmaImg)
+        })
+    }
+
+
     // Code below is for the video player
     // This code loads the IFrame Player API code asynchronously.
     var tag = document.createElement('script');
