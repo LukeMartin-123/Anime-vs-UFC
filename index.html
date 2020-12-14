@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anime vs UFC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="https://unpkg.com/bulmaswatch/nuclear/bulmaswatch.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -14,10 +16,7 @@
     <link rel="stylesheet" href="./css/styles.css">
 
 </head>
-
-<body>
-
-    <section class="hero">
+    <section class="hero is-desktop">
 
         <div class="bg-img">
 
@@ -49,17 +48,18 @@
                         <div class="column">
 
                             <div id=mmaplayer> </div>
-                            <button class="button is-warning is-moble" id="liveaction-home-btn">Live
-                                Action</button>
+                            <div id="mma-giphy"></div>
+                            <button class="button is-warning is-moble" id="liveaction-home-btn">Live Action</button>
                             <button class="button is-warning is-moble none" id="liveaction-vote-btn">Vote</button>
+
+                            <button id="giphy">Giphy</button>
+
+                            <h2><span id="mmaVoteCounter">0</span> Votes for MMA</h2>
 
                         </div>
                     </div>
                 </div>
             </section>
-
-
-
         </div>
 
 
