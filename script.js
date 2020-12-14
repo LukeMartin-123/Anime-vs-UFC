@@ -1,53 +1,5 @@
 // This function calls the Youtube API and receives an object for a certain playlist
 $(document).ready(function () {
-//giphy-connection
-    
-    // BRANDONS API KEY FOR GIPHY
-    var APIKEY = 'EcTuCnxi6gDpNiUddqUXjbRwECX0iIvh',
-    // BRANDONS API KEY FOR YOUTUBE
-    // var apiKey = 'AIzaSyCPfeCYrxkjhyQ1ghnZO43_clhrhHxiJqs',
-    queryURL = ''
-
-    // $'#giphy-test').on('click', giphy)
-    function giphy (event) {
-        event.preventDefault()
-        var textInput = $('#giphy-search').val()
-        console.log(textInput)
-        console.log('giphy button was clicked')
-        var url = `https://api.giphy.com/v1/gifs/search?api_key=${APIKEY}&limit=1&q=`
-        var str = textInput.trim()
-        console.log(str)
-        url = url.concat(str)
-        console.log(url)
-        fetch(url)
-        .then(response => response.json() )
-        .then(content => {
-            // data, pagination, meta
-            console.log(content.data)
-            console.log('META', content.meta)
-            console.log(content.data[0].title)
-            var p = $('<p>')
-            var img = $('<img>')
-            var fc = $('<figcaption>')
-            img.attr('src', content.data[0].images.downsized.url)  
-            console.log(content.data[0].images.downsized.url)
-            img.attr('alt', content.data[0].title) 
-            fc.text(content.data[0].title) 
-            console.log(content.data[0].title)
-            p.append(img, fc)
-            $('#giphy-container').append(p)
-
-        })
-        .catch(err => {
-            console.log(err)
-        })
-    }
-
-    $.ajax({
-        queryURL: queryURL,
-        method: 'GET'
-    }).then
-
     $('#anime-home-btn').on('click', animeBtn)
     $('#liveaction-home-btn').on('click', liveActionBtn)
 
@@ -213,11 +165,7 @@ $(':button').click(function () {
     src="https://apis.google.com/js/client.js?onload=init";
     var firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-
-
 })
-
 
     function animeBtn () {
         console.log('animeBtnClick works')
@@ -242,12 +190,43 @@ $(':button').click(function () {
             $('#liveaction-vote-btn').addClass('none')
         }
     })
+        $('#giphy').on('click', getMmaGiphy)
+        $('#a-giphy').on('click', getAnimeGiphy)
 
-    // create a new button tag
-    // give it the text of vote
-    // append it to the dom
-    
-    // live action btn is clicked 
-    // apply display none to div anime player and mma player
+function getMmaGiphy () {
+    var APIKEY = 'EcTuCnxi6gDpNiUddqUXjbRwECX0iIvh'
+    var queryURL = `http://api.giphy.com/v1/gifs/KzVPO2EarWBSWCS2eN?api_key=${APIKEY}`
+    $.ajax({
+        url: queryURL,
+        method: 'GET'
+    }).then(function (response) {
+        //console.log(queryURL)
+        var mmaImg = $('<img>')
+        console.log(response)
+        console.log('giphy btn clicked')
+        //var mmaImg = (response.data.images.downsized_small)
+       //var mmaImg = <img src="response.data.images.downsized_small"/>
+        mmaImg.attr('src', response.data.images.downsized_medium.url)
+        $('#mma-giphy').append(mmaImg)
+    })
+}
 
+function getAnimeGiphy () {
+    var APIKEY = 'EcTuCnxi6gDpNiUddqUXjbRwECX0iIvh'
+    var queryURL = `http://api.giphy.com/v1/gifs/26vaTNUAnJOP1xalq?api_key=${APIKEY}`
+    $.ajax({
+        url: queryURL,
+        method: 'GET'
+    }).then(function (response) {
+        //console.log(queryURL)
+        var animeImg = $('<img>')
+        console.log(response)
+        console.log('giphy btn clicked')
+        //var mmaImg = (response.data.images.downsized_small)
+       //var mmaImg = <img src="response.data.images.downsized_small"/>
+        animeImg.attr('src', response.data.images.downsized_medium.url)
+        $('#mma-giphy').append(animeImg)
+    })
+
+}
 
