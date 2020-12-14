@@ -24,6 +24,10 @@
 
 }
 
+.none {
+    display: none;
+}
+
 /* #anime-home-btn {
 
     margin-top: 75%;
