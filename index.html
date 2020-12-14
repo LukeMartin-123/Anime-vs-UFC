@@ -16,64 +16,65 @@
     <link rel="stylesheet" href="./css/styles.css">
 
 </head>
-    <section class="hero is-desktop">
+<section class="hero is-desktop">
 
-        <div class="bg-img">
+    <div class="bg-img">
 
-            <section class="section">
+        <section class="section">
 
-                <div class="container">
+            <div class="container">
 
-                    <div class="columns animebutton">
+                <button class="button is-dark is-mobile big" id="start-button">START THE BATTLE
+                </button>
 
-                        <div class="column">
+                <div class="columns animebutton">
 
-                            <div id=animeplayer> </div>
-                            <div id=anime-giphy> </div>
-                            <button class="button is-dark is-mobile" id="anime-home-btn">Anime</button>
-                            <button class="button is-dark is-mobile none" id="anime-vote-btn">Vote</button>
-                            <h2><span id="animeVoteCounter">0</span> Votes for Anime</h2>
-                        </div>
-                    </div>
+                    <div class="column">
 
-                    <div class="columns watchagain">
-                        <div class="column">
-
-                            <button class="button is-warning is-moble none" id="watch-again">Watch
-                                Again?</button>
-
-                        </div>
-                    </div>
-
-                    <div class="columns liveaction">
-                        <div class="column">
-
-                            <div id=mmaplayer> </div>
-                            <div id="mma-giphy"></div>
-                            <button class="button is-warning is-moble" id="liveaction-home-btn">Live Action</button>
-                            <button class="button is-warning is-moble none" id="liveaction-vote-btn">Vote</button>
-
-                            <button id="giphy">Giphy</button>
-
-                            <h2><span id="mmaVoteCounter">0</span> Votes for MMA</h2>
-
-                        </div>
+                        <div id=animeplayer> </div>
+                        <div class=centered id=anime-giphy> </div>
+                        <button class="button is-dark is-mobile none" id="anime-home-btn">Anime</button>
+                        <button class="button is-dark is-mobile none" id="anime-vote-btn">Vote</button>
+                        <h2 class= "centered-anime-count none" id='animecount'> Anime: <span id="animeVoteCounter">0</span></h2>
                     </div>
                 </div>
-            </section>
-        </div>
 
+                <div class="columns watchagain">
+                    <div class="column">
 
+                        <h1 class="centeredh1 none" id="winner"> WINNER! </h1>
 
-        <form action="">
-            <input id="giphy-search" type="text">
-            <button id="giphy-test">Giphy Test</button>
-            <div id="giphy-container">
+                        <button class="button is-warning is-moble none centeredbtn" id="watch-again">Watch
+                            Again?</button>
 
+                    </div>
+                </div>
+
+                <div class="columns liveaction">
+                    <div class="column">
+
+                        <div id=mmaplayer> </div>
+                        <div class=centered id="mma-giphy"></div>
+                        <button class="button is-warning is-moble none" id="liveaction-home-btn">Live Action</button>
+                        <button class="button is-warning is-moble none" id="liveaction-vote-btn">Vote</button>
+
+                        <h2 class= "centered-mma-count none" id=mmacount> Live Action: <span id="mmaVoteCounter">0</span> </h2>
+
+                    </div>
+                </div>
             </div>
-        </form>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="script.js"></script>
-</body>
+        </section>
+    </div>
+
+
+
+    <form action="">
+        <div id="giphy-container">
+
+        </div>
+    </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    </body>
 
 </html>
