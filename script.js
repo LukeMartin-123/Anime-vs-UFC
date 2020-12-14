@@ -1,7 +1,5 @@
 // This function calls the Youtube API and receives an object for a certain playlist
 $(document).ready(function () {
-// giphy-connection
-
     
     // BRANDONS API KEY FOR GIPHY
     var APIKEY = 'EcTuCnxi6gDpNiUddqUXjbRwECX0iIvh',
@@ -55,12 +53,57 @@ $(document).ready(function () {
 
 function animeBtn () {
     console.log('animeBtnClick works')
+    loadAnimeVids() 
+    $(this).addClass("none");
+    $('#anime-vote-btn').removeClass("none");
 }
 
 function liveActionBtn () {
     console.log('live action btn clicked')
+    loadVids()
+    $(this).addClass("none");
+    $('#liveaction-vote-btn').removeClass("none");
 }
-   
+
+$(':button').click(function () {
+    if (this.id == 'liveaction-vote-btn') {
+        $('#anime-vote-btn').addClass("none");
+        $('#liveaction-vote-btn').addClass("none");
+        $('#anime-home-btn').addClass("none");
+        $('#watch-again').removeClass("none"); 
+        $('#animeplayer').addClass("none");
+    }
+    else if (this.id == 'anime-vote-btn') {
+        $('#liveaction-vote-btn').addClass("none");
+        $('#anime-vote-btn').addClass("none");
+        $('#liveaction-home-btn').addClass("none");
+        $('#watch-again').removeClass("none");  
+        $('#mmaplayer').addClass("none"); 
+    }
+    else if (this.id == 'watch-again') {
+        $('#mmaplayer').removeClass("none");
+        $('#animeplayer').removeClass("none");
+        loadVids()
+        loadAnimeVids() 
+    }
+});
+
+
+    
+
+
+
+// When anime or live action button is clicked show video and hide that button
+
+// Video and vote button appear
+
+// When vote button is clicked a tally is added to local storage and other vote button disappears
+
+
+
+
+
+
     var key = 'AIzaSyDX0T3NV-ugzJ8VlXk11vKCoCS26_2xSSs';
     var playlistId = 'PLzf4erpJ2VgJ4v18XQHW5lAamvwdk-dxl';
     var animePlaylistId = 'PLzf4erpJ2VgJjEuN3_vDAU5kAK2hE44gE';
@@ -80,8 +123,8 @@ function liveActionBtn () {
         playlistId: animePlaylistId,
     }
 
-    loadVids();
-    loadAnimeVids();
+    //loadVids();
+    //loadAnimeVids();
 
     // This function takes the information from the mma video object and places only the video ID into an array
     function loadVids() {
@@ -131,7 +174,6 @@ function liveActionBtn () {
             })
         })
     };
-
     // Code below is for the video player
     // This code loads the IFrame Player API code asynchronously.
     var tag = document.createElement('script');
@@ -140,4 +182,6 @@ function liveActionBtn () {
     src="https://apis.google.com/js/client.js?onload=init";
     var firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+
 })
