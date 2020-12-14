@@ -50,7 +50,6 @@ $(document).ready(function () {
     $('#anime-home-btn').on('click', animeBtn)
     $('#liveaction-home-btn').on('click', liveActionBtn)
 
-
 function animeBtn () {
     console.log('animeBtnClick works')
     loadAnimeVids() 
@@ -89,10 +88,6 @@ $(':button').click(function () {
 });
 
 
-    
-
-
-
 // When anime or live action button is clicked show video and hide that button
 
 // Video and vote button appear
@@ -100,8 +95,46 @@ $(':button').click(function () {
 // When vote button is clicked a tally is added to local storage and other vote button disappears
 
 
+// Code below is for the video player
+   // This code loads the IFrame Player API code asynchronously.
+   var tag = document.createElement('script');
 
+   tag.src = "https://www.youtube.com/iframe_api";
+   var firstScriptTag = document.getElementsByTagName('script')[0];
+   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
+   // This function creates an <iframe> (and YouTube player) after the API code downloads.
+   var player;
+   function onYouTubeIframeAPIReady() {
+     player = new YT.Player('player', {
+       height: '390',
+       width: '640',
+       videoId: 'EzOr8Gglf3k',
+       events: {
+         'onReady': onPlayerReady,
+         'onStateChange': onPlayerStateChange
+       }
+     });
+   }
+
+   // The API will call this function when the video player is ready.
+   function onPlayerReady(event) {
+     event.target.playVideo();
+   }
+
+   // The API calls this function when the player's state changes.
+   // The function indicates that when playing a video (state=1),
+   // the player should play for six seconds and then stop.
+   var done = false;
+   function onPlayerStateChange(event) {
+     if (event.data == YT.PlayerState.PLAYING && !done) {
+       setTimeout(stopVideo, 6000);
+       done = true;
+     }
+   }
+   function stopVideo() {
+     player.stopVideo();
+   }
 
 
     var key = 'AIzaSyDX0T3NV-ugzJ8VlXk11vKCoCS26_2xSSs';
@@ -184,4 +217,19 @@ $(':button').click(function () {
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 
+
 })
+
+
+    function animeBtn () {
+        console.log('animeBtnClick works')
+        loadAnimeVids() 
+    }
+
+    function liveActionBtn () {
+        loadAnimeVids()
+        console.log('live action btn clicked')
+    }
+
+})
+
