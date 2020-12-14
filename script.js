@@ -1,7 +1,6 @@
 // This function calls the Youtube API and receives an object for a certain playlist
 $(document).ready(function () {
 //giphy-connection
-    
     // BRANDONS API KEY FOR GIPHY
     var APIKEY = 'EcTuCnxi6gDpNiUddqUXjbRwECX0iIvh'
     // BRANDONS API KEY FOR YOUTUBE
@@ -43,7 +42,6 @@ $(document).ready(function () {
             console.log(err)
         })
     }
-
     $.ajax({
         queryURL: queryURL,
         method: 'GET'
@@ -52,6 +50,15 @@ $(document).ready(function () {
     $('#anime-home-btn').on('click', animeBtn)
 
     $('#liveaction-home-btn').on('click', liveActionBtn)
+
+function animeBtn () {
+    console.log('animeBtnClick works')
+}
+
+function liveActionBtn () {
+    console.log('live action btn clicked')
+}
+
 
 // Code below is for the video player
    // This code loads the IFrame Player API code asynchronously.
@@ -93,7 +100,7 @@ $(document).ready(function () {
    function stopVideo() {
      player.stopVideo();
    }
-
+btn-trigger-vid
     var key = 'AIzaSyDX0T3NV-ugzJ8VlXk11vKCoCS26_2xSSs';
     var playlistId = 'PLzf4erpJ2VgJ4v18XQHW5lAamvwdk-dxl';
     var animePlaylistId = 'PLzf4erpJ2VgJjEuN3_vDAU5kAK2hE44gE';
@@ -202,6 +209,4 @@ $(document).ready(function () {
     
     // live action btn is clicked 
     // apply display none to div anime player and mma player
-    
-
 })
