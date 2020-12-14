@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anime vs UFC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="https://unpkg.com/bulmaswatch/nuclear/bulmaswatch.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -14,6 +16,45 @@
     <link rel="stylesheet" href="./css/styles.css">
 
 </head>
+    <section class="hero is-desktop">
+
+        <div class="bg-img">
+
+            <section class="section">
+                <button class="button is-warning is-moble none" id="watch-again">Watch Again?</button>
+                <div class="container">
+
+                        <div class="column is-half">
+                            <div id =animeplayer> </div>
+                            <button class="button is-dark is-mobile" id="anime-home-btn">Anime</button>
+                            <button class="button is-dark is-mobile none" id="anime-vote-btn">Vote</button>
+                        </div>
+              
+                        <div class="column is-half">
+                            <div id=mmaplayer> </div>
+                            <button class="button is-warning is-moble" id="liveaction-home-btn">Live Action</button>
+                            <button class="button is-warning is-moble none" id="liveaction-vote-btn">Vote</button>
+                        </div>
+                        
+                </div>
+            </section>
+
+        </div>
+
+    <div id="mmaplayer"></div>
+    <div id="animeplayer"></div>
+
+    <button id="anime-home-btn">Anime</button>
+    <button id="liveaction-home-btn">Live Action</button>
+    main
+
+    <form action="">
+        <input id="giphy-search" type="text">
+        <button id="giphy-test">Giphy Test</button>
+        <div id="giphy-container">
+
+        </div>
+    </form>
 
     <section class="hero is-desktop">
 
@@ -27,32 +68,35 @@
                             <div id =animeplayer> </div>
                             <button class="button is-dark is-mobile" id="anime-home-btn">Anime</button>
                             <button class="button is-dark is-mobile none" id="anime-vote-btn">Vote</button>
+
+                            <button id="a-giphy">Anime Giphy</button>
+
                             <h2><span id="animeVoteCounter">0</span> Votes for Anime</h2>
+
                         </div>
               
                         <div class="column is-half">
                             <div id=mmaplayer> </div>
+                            <div id="mma-giphy"></div>
                             <button class="button is-warning is-moble" id="liveaction-home-btn">Live Action</button>
                             <button class="button is-warning is-moble none" id="liveaction-vote-btn">Vote</button>
+
+                            <button id="giphy">Giphy</button>
+
                             <h2><span id="mmaVoteCounter">0</span> Votes for MMA</h2>
+
                         </div>
                         
                 </div>
             </section>
-
-
-
         </div>
 
     </section>
 
-    <form action="">
+    <!-- <form action="">
         <input id="giphy-search" type="text">
         <button id="giphy-test">Giphy Test</button>
         <div id="giphy-container">
-
-        </div>
-    </form>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="script.js"></script>
