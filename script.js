@@ -67,26 +67,46 @@ $(document).ready(function () {
 
     // This button section is for the functionality of the buttons disappering, reappearing and showing the proper video
 
+
     $(':button').click(function () {
         if (this.id == 'liveaction-vote-btn') {
             $('#anime-vote-btn').addClass("none");
             $('#liveaction-vote-btn').addClass("none");
             $('#anime-home-btn').addClass("none");
             $('#watch-again').removeClass("none");
+            $('#winner').removeClass("none");
+            $('#mmacount').removeClass("none");
+            $('#animecount').removeClass("none");
             $('#animeplayer').addClass("none");
+            $('#mmaplayer').addClass("none");
+            
         }
         else if (this.id == 'anime-vote-btn') {
             $('#liveaction-vote-btn').addClass("none");
             $('#anime-vote-btn').addClass("none");
             $('#liveaction-home-btn').addClass("none");
             $('#watch-again').removeClass("none");
+            $('#winner').removeClass("none");
+            $('#mmacount').removeClass("none");
+            $('#animecount').removeClass("none");
+            $('#animeplayer').addClass("none");
             $('#mmaplayer').addClass("none");
         }
         else if (this.id == 'watch-again') {
+            $('#mma-giphy').addClass("none");
+            $('#anime-giphy').addClass("none");
             $('#mmaplayer').removeClass("none");
             $('#animeplayer').removeClass("none");
+            $('#winner').addClass("none");
             loadVids()
             loadAnimeVids()
+        }
+
+        else if (this.id == 'start-button') {
+        $('#start-button').addClass("none");
+        $('#anime-home-btn').removeClass("none");
+        $('#liveaction-home-btn').removeClass("none");
+
         }
     });
 
@@ -177,8 +197,8 @@ $(document).ready(function () {
         })
     };
 
-    $('#giphy').on('click', getMmaGiphy)
-    $('#a-giphy').on('click', getAnimeGiphy)
+    $('#liveaction-vote-btn').on('click', getMmaGiphy)
+    $('#anime-vote-btn').on('click', getAnimeGiphy)
 
     function getAnimeGiphy () {
         var APIKEY = 'EcTuCnxi6gDpNiUddqUXjbRwECX0iIvh'
@@ -187,14 +207,13 @@ $(document).ready(function () {
             url: queryURL,
             method: 'GET'
         }).then(function (response) {
-            //console.log(queryURL)
             var animeImg = $('<img>')
             console.log(response)
             console.log('giphy btn clicked')
             //var mmaImg = (response.data.images.downsized_small)
            //var mmaImg = <img src="response.data.images.downsized_small"/>
             animeImg.attr('src', response.data.images.downsized_medium.url)
-            $('#mma-giphy').append(animeImg)
+            $('#anime-giphy').append(animeImg)
         })
     }
 
@@ -205,7 +224,6 @@ $(document).ready(function () {
             url: queryURL,
             method: 'GET'
         }).then(function (response) {
-            //console.log(queryURL)
             var mmaImg = $('<img>')
             console.log(response)
             console.log('giphy btn clicked')
