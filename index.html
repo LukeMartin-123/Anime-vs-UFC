@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="./css/styles.css">
 
 </head>
-<section class="hero is-desktop is-mobile">
+
+<section class="hero is-desktop">
 
     <div class="bg-img">
 
@@ -22,21 +23,18 @@
 
             <div class="container">
 
-                <button class="button is-warning is-mobile big" id="start-button">START THE BATTLE
+                <button class="button is-dark is-mobile big" id="start-button">START THE BATTLE
                 </button>
 
                 <div class="columns animebutton">
 
                     <div class="column">
 
-                        <button class="button is-dark is-mobile none" id="anime-home-btn">Anime</button>
-                        
-                        <div class=animeplpos id=animeplayer> </div>
-                        
+                        <div id=animeplayer> </div>
                         <div class=centered id=anime-giphy> </div>
-                       
+                        <button class="button is-dark is-mobile none" id="anime-home-btn">Anime</button>
                         <button class="button is-dark is-mobile none" id="anime-vote-btn">Vote</button>
-                        
+
                         <h2 class= "centered-anime-count none" id='animecount'> Anime: <span id="animeVoteCounter">0</span></h2>
                     </div>
                 </div>
@@ -53,15 +51,14 @@
                 </div>
 
                 <div class="columns liveaction">
-                   
-                    <div class="column">                  
+
+                    <div class="column">
 
                         <div id=mmaplayer> </div>
-                        <div class="centered" id="mma-giphy"></div>
-                       
+                        <div class=centered id="mma-giphy"></div>
+                        <button class="button is-warning is-mobile none" id="liveaction-home-btn">Live Action</button>
                         <button class="button is-warning is-mobile none" id="liveaction-vote-btn">Vote</button>
 
-                            <button class="button is-warning is-mobile none" id="liveaction-home-btn">Live Action</button>
                         <h2 class= "centered-mma-count none" id=mmacount> Live Action: <span id="mmaVoteCounter">0</span> </h2>
 
                     </div>
