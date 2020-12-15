@@ -2,7 +2,7 @@
 $(document).ready(function () {
 
     // BRANDONS API KEY FOR GIPHY
-    var APIKEY = '94c0wIX29IMWXwB7We5WuNS3Y57Da9gs',
+    var APIKEY = '5xyfXnmTReWOtbVfJaupLcyqzTj6JVfr',
         // BRANDONS API KEY FOR YOUTUBE
         // var apiKey = 'AIzaSyCPfeCYrxkjhyQ1ghnZO43_clhrhHxiJqs',
         queryURL = ''
@@ -165,8 +165,8 @@ $(document).ready(function () {
             var randomVideo = videoIds[randIndex]
             window.YT.ready(function () {
                 player = new YT.Player('mmaplayer', {
-                    height: '360',
-                    width: '480',
+                    height: '380',
+                    width: '500',
                     videoId: randomVideo,
                 });
             })
@@ -189,8 +189,8 @@ $(document).ready(function () {
             var randomVideo = videoIds[randIndex]
             window.YT.ready(function () {
                 player2 = new YT.Player('animeplayer', {
-                    height: '360',
-                    width: '480',
+                    height: '380',
+                    width: '500',
                     videoId: randomVideo,
                 });
             })
