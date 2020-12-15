@@ -96,6 +96,7 @@
         text-align:center;
         transition: all 0.15s;
 }
+    
 
 .centered-mma-count {
     position: fixed;
@@ -108,31 +109,22 @@
 
 }
 
+@media (max-width: 768px) {
 
+    #animeplayer {
+        height: 260px;
+        width: 380px;
+    }
 
+    #mmaplayer {
+        height: 260px;
+        width: 380px;
+    }
 
-
- #anime-home-btn {
-    
- }
-
- #liveaction-home-btn,  {
-   
- }
+}
 
 .none {
     display: none;
 }
 
-/* #anime-home-btn {
 
-    margin-top: 75%;
-   margin-left: -15%;
-}
-
-#liveaction-home-btn {
-    
-    margin-top: 75%;
-    margin-left: 85%;
-
-} */

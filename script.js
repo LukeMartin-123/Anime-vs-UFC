@@ -165,8 +165,8 @@ $(document).ready(function () {
             var randomVideo = videoIds[randIndex]
             window.YT.ready(function () {
                 player = new YT.Player('mmaplayer', {
-                    height: '360',
-                    width: '480',
+                    height: '380',
+                    width: '500',
                     videoId: randomVideo,
                 });
             })
@@ -189,8 +189,8 @@ $(document).ready(function () {
             var randomVideo = videoIds[randIndex]
             window.YT.ready(function () {
                 player2 = new YT.Player('animeplayer', {
-                    height: '360',
-                    width: '480',
+                    height: '380',
+                    width: '500',
                     videoId: randomVideo,
                 });
             })
