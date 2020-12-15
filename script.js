@@ -66,8 +66,6 @@ $(document).ready(function () {
     }
 
     // This button section is for the functionality of the buttons disappering, reappearing and showing the proper video
-
-
     $(':button').click(function () {
         if (this.id == 'liveaction-vote-btn') {
             $('#anime-vote-btn').addClass("none");
@@ -233,7 +231,6 @@ $(document).ready(function () {
             $('#mma-giphy').append(mmaImg)
         })
     }
-
 
     // Code below is for the video player
     // This code loads the IFrame Player API code asynchronously.
