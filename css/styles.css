@@ -46,27 +46,70 @@
 }
 
 
- #anime-home-btn {
-    
- }
-
- #liveaction-home-btn,  {
-   
- }
-
 .none {
     display: none;
 }
 
-/* #anime-home-btn {
+ #anime-home-btn {
+    font-family: 'Bungee', cursive;
 
-    margin-top: 75%;
-   margin-left: -15%;
+       
 }
 
 #liveaction-home-btn {
+    font-family: 'Noto Sans', sans-serif;
     
-    margin-top: 75%;
-    margin-left: 85%;
+    
+    
+}
 
-} */
+@media screen and (max-width: 768px) {
+
+.column {
+    height: 50%;
+    width: 50%;
+    position: static;
+}
+#animeplayer {
+
+ 
+    position: fixed;
+
+}
+
+#mmaplayer {
+
+    padding-bottom: 75%;
+    position: fixed;
+
+    
+}
+
+}
+.none {
+    display: none;
+}
+@media screen and (max-width: 320px) {
+
+.column {
+    height: 75%;
+    width: 50%;
+    position: fixed;
+}
+
+#animeplayer {
+
+    padding-bottom: 15%;
+    border: 25%;
+    position: fixed;
+
+}
+
+#mmaplayer {
+
+    padding-bottom: 75%;
+    position: fixed;
+
+}
+
+}
