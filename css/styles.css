@@ -39,9 +39,15 @@
 
 }
 
+#anime-home-btn{
+   left: 150px;
+   position: fixed;
+  
+}
+
 .liveaction {
     bottom: 40px;
-    right: 100px;
+    right: 125px;
     position: fixed;
 }
 
@@ -112,27 +118,150 @@
 
 
 
- #anime-home-btn {
-    
- }
+.centeredbtn {
+    position: fixed;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
- #liveaction-home-btn,  {
-   
- }
+.centeredh1 {
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    font-weight: bold;
+    text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
+}
+
+.centered-anime-count {
+    position: fixed;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    font-size: 45px;
+    font-weight: bold;
+    color: white;
+
+}
+
+#start-button {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 700px;
+        height: 200px;
+        font-size: 40px;
+        border:0.16em solid #FFFFFF;
+        margin:0 0.3em 0.3em 0;
+        box-sizing: border-box;text-decoration:none;font-family:'Roboto',sans-serif;
+        font-weight:400;
+        color:#FFFFFF;
+        text-align:center;
+        transition: all 0.15s;
+}
+
+.centered-mma-count {
+    position: fixed;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    font-size: 45px;
+    font-weight: bold;
+    color: white;
+
+}
 
 .none {
     display: none;
 }
 
-/* #anime-home-btn {
+@media (max-width: 768px) {
 
-    margin-top: 75%;
-   margin-left: -15%;
+#animeplayer {
+    height: 260px;
+    width: 380px;
 }
 
-#liveaction-home-btn {
-    
-    margin-top: 75%;
-    margin-left: 85%;
+#mmaplayer {
+    height: 260px;
+    width: 380px;
+} 
 
-} */
+#anime-home-btn{
+   left: 150px;
+   position: fixed;
+  
+}
+
+.liveaction {
+    bottom: 40px;
+    right: 125px;
+    position: fixed;
+}
+
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.centeredbtn {
+    position: fixed;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.centeredh1 {
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    font-weight: bold;
+    text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
+}
+
+.centered-anime-count {
+    position: fixed;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    font-size: 45px;
+    font-weight: bold;
+    color: white;
+
+}
+
+#start-button {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 700px;
+        height: 200px;
+        font-size: 40px;
+        border:0.16em solid #FFFFFF;
+        margin:0 0.3em 0.3em 0;
+        box-sizing: border-box;text-decoration:none;font-family:'Roboto',sans-serif;
+        font-weight:400;
+        color:#FFFFFF;
+        text-align:center;
+        transition: all 0.15s;
+}
+
+.centered-mma-count {
+    position: fixed;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    font-size: 45px;
+    font-weight: bold;
+    color: white;
+
+}
+}
