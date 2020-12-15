@@ -39,9 +39,15 @@
 
 }
 
+#anime-home-btn{
+   left: 150px;
+   position: fixed;
+  
+}
+
 .liveaction {
     bottom: 40px;
-    right: 100px;
+    right: 125px;
     position: fixed;
 }
 
@@ -126,5 +132,4 @@
 .none {
     display: none;
 }
-
 

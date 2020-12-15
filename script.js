@@ -2,7 +2,7 @@
 $(document).ready(function () {
 
     // BRANDONS API KEY FOR GIPHY
-    var APIKEY = '94c0wIX29IMWXwB7We5WuNS3Y57Da9gs',
+    var APIKEY = '5xyfXnmTReWOtbVfJaupLcyqzTj6JVfr',
         // BRANDONS API KEY FOR YOUTUBE
         // var apiKey = 'AIzaSyCPfeCYrxkjhyQ1ghnZO43_clhrhHxiJqs',
         queryURL = ''
