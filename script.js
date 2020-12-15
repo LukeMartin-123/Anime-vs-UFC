@@ -2,7 +2,7 @@
 $(document).ready(function () {
 
     // BRANDONS API KEY FOR GIPHY
-    var APIKEY = '5xyfXnmTReWOtbVfJaupLcyqzTj6JVfr',
+    var APIKEY = '94c0wIX29IMWXwB7We5WuNS3Y57Da9gs',
         // BRANDONS API KEY FOR YOUTUBE
         // var apiKey = 'AIzaSyCPfeCYrxkjhyQ1ghnZO43_clhrhHxiJqs',
         queryURL = ''
@@ -202,7 +202,7 @@ $(document).ready(function () {
 
     function getAnimeGiphy () {
         var APIKEY = 'EcTuCnxi6gDpNiUddqUXjbRwECX0iIvh'
-        var queryURL = `http://api.giphy.com/v1/gifs/26vaTNUAnJOP1xalq?api_key=${APIKEY}`
+        var queryURL = `https://api.giphy.com/v1/gifs/26vaTNUAnJOP1xalq?api_key=${APIKEY}`
         $.ajax({
             url: queryURL,
             method: 'GET'
@@ -219,7 +219,7 @@ $(document).ready(function () {
 
     function getMmaGiphy () {
         var APIKEY = 'EcTuCnxi6gDpNiUddqUXjbRwECX0iIvh'
-        var queryURL = `http://api.giphy.com/v1/gifs/KzVPO2EarWBSWCS2eN?api_key=${APIKEY}`
+        var queryURL = `https://api.giphy.com/v1/gifs/KzVPO2EarWBSWCS2eN?api_key=${APIKEY}`
         $.ajax({
             url: queryURL,
             method: 'GET'
