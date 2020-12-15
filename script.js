@@ -244,5 +244,11 @@ $(document).ready(function () {
     var firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
+    $('#watch-again').on('click', reloadPage)
+
+ function reloadPage () {
+     console.log('reloadPage btn fired')
+     window.location.reload()
+    }
 
 })
