@@ -124,7 +124,38 @@
 
     #mmaplayer {
         height: 260px;
-        width: 380px;
+        width: 380px; }
+
+        #animecount {
+            font-size: 15px;
+        }
+    
+        #mmacount {
+            font-size: 15px;
+            
+        }
+
+
+}
+
+@media (max-width: 390px) {
+
+    #animeplayer {
+        height: 200px;
+        width: 320px;
+    }
+
+    #mmaplayer {
+        height: 200px;
+        width: 320px;
+    }
+
+    #animecount{
+        font-size: 15px;
+    }
+
+    #mmacount {
+        font-size: 15px;
     }
 
 }
